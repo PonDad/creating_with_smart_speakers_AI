@@ -2,7 +2,7 @@
   "languageModel": {
     "types": [
       {
-        "name": "ADD",
+        "name": "list_of_add",
         "values": [
           {
             "id": null,
@@ -10,8 +10,8 @@
               "value": "たす",
               "synonyms": [
                 "たす",
-                "プラス",
                 "足す",
+                "プラス",
                 "＋"
               ]
             }
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "name": "SUB",
+        "name": "list_of_sub",
         "values": [
           {
             "id": null,
@@ -27,6 +27,7 @@
               "value": "ひく",
               "synonyms": [
                 "ひく",
+                "引く",
                 "マイナス",
                 "−"
               ]
@@ -36,31 +37,6 @@
       }
     ],
     "intents": [
-      {
-        "name": "AddIntent",
-        "samples": [
-          "{first} {subslot} {second} は",
-          "{first} {addslot} {second} は"
-        ],
-        "slots": [
-          {
-            "name": "first",
-            "type": "AMAZON.NUMBER"
-          },
-          {
-            "name": "subslot",
-            "type": "SUB"
-          },
-          {
-            "name": "second",
-            "type": "AMAZON.NUMBER"
-          },
-          {
-            "name": "addslot",
-            "type": "ADD"
-          }
-        ]
-      },
       {
         "name": "AMAZON.CancelIntent",
         "samples": []
@@ -72,6 +48,31 @@
       {
         "name": "AMAZON.StopIntent",
         "samples": []
+      },
+      {
+        "name": "calcIntent",
+        "samples": [
+          "{firstNum} {calcAdd} {secondNum} は",
+          "{firstNum} {calcSub} {secondNum} は"
+        ],
+        "slots": [
+          {
+            "name": "firstNum",
+            "type": "AMAZON.NUMBER"
+          },
+          {
+            "name": "secondNum",
+            "type": "AMAZON.NUMBER"
+          },
+          {
+            "name": "calcAdd",
+            "type": "list_of_add"
+          },
+          {
+            "name": "calcSub",
+            "type": "list_of_sub"
+          }
+        ]
       }
     ],
     "invocationName": "プロト"
