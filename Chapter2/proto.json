@@ -1,0 +1,79 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "ADD",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "たす",
+              "synonyms": [
+                "たす",
+                "プラス",
+                "足す",
+                "＋"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "SUB",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "ひく",
+              "synonyms": [
+                "ひく",
+                "マイナス",
+                "−"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AddIntent",
+        "samples": [
+          "{first} {subslot} {second} は",
+          "{first} {addslot} {second} は"
+        ],
+        "slots": [
+          {
+            "name": "first",
+            "type": "AMAZON.NUMBER"
+          },
+          {
+            "name": "subslot",
+            "type": "SUB"
+          },
+          {
+            "name": "second",
+            "type": "AMAZON.NUMBER"
+          },
+          {
+            "name": "addslot",
+            "type": "ADD"
+          }
+        ]
+      },
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      }
+    ],
+    "invocationName": "プロト"
+  }
+}
