@@ -1,0 +1,10 @@
+.
+├── datasets
+│   ├── train
+│   │   ├── green_apple
+│   │   └── red_apple
+│   └── validation
+│       ├── green_apple
+│       └── red_apple
+├── tiny_CNN_apple.py
+└── trained_models

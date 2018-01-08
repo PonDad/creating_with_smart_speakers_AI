@@ -1,0 +1,93 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "camera",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "カメラ",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "写真",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "チーズ",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "who",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "誰",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "だれ",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "CameraIntent",
+        "samples": [
+          "{camera}",
+          "はい {camera}",
+          "もういいよ"
+        ],
+        "slots": [
+          {
+            "name": "camera",
+            "type": "camera"
+          }
+        ]
+      },
+      {
+        "name": "WhoIntent",
+        "samples": [
+          "これは {who}",
+          " {who} だ"
+        ],
+        "slots": [
+          {
+            "name": "who",
+            "type": "who"
+          }
+        ]
+      }
+    ],
+    "invocationName": "プロトのカメラ"
+  }
+}
