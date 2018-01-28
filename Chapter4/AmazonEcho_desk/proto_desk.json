@@ -1,0 +1,60 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "offIntent",
+        "samples": [
+          "消して",
+          "けして",
+          "オフにして"
+        ],
+        "slots": []
+      },
+      {
+        "name": "onIntent",
+        "samples": [
+          "つけて",
+          "点けて",
+          "オンにして"
+        ],
+        "slots": []
+      },
+      {
+        "name": "studyEnd",
+        "samples": [
+          "宿題をおわって",
+          "宿題を終わって",
+          "宿題おわって",
+          "宿題終わって",
+          "宿題終わり",
+          "宿題おわり"
+        ],
+        "slots": []
+      },
+      {
+        "name": "stydyStart",
+        "samples": [
+          "宿題をはじめて",
+          "宿題を始めて",
+          "宿題やるよ",
+          "宿題をやるよ",
+          "宿題はじめて"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "プロトの明かり"
+  }
+}

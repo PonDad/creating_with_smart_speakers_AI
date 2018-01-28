@@ -33,15 +33,14 @@
           {
             "id": null,
             "name": {
-              "value": "誰",
-              "synonyms": []
-            }
-          },
-          {
-            "id": null,
-            "name": {
               "value": "だれ",
-              "synonyms": []
+              "synonyms": [
+                "だれ",
+                "誰",
+                "だあれ",
+                "だーれ",
+                "だ〜れ"
+              ]
             }
           }
         ]
@@ -64,8 +63,7 @@
         "name": "CameraIntent",
         "samples": [
           "{camera}",
-          "はい {camera}",
-          "もういいよ"
+          "はい {camera}"
         ],
         "slots": [
           {
@@ -78,7 +76,8 @@
         "name": "WhoIntent",
         "samples": [
           "これは {who}",
-          " {who} だ"
+          " {who} だ",
+          "わたしは {who} だ"
         ],
         "slots": [
           {

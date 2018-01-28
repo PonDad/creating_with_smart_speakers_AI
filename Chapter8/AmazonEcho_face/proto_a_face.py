@@ -22,7 +22,7 @@ model = load_model(model_path)
 
 @ask.launch
 def launched():
-    return question('かくれんぼしましょう。もういいかい？')
+    return question('写真を撮る時はハイチーズって言ってね。')
 
 @ask.intent('CameraIntent')
 def camera():
@@ -59,10 +59,10 @@ def who():
     face_predict = model.predict(x)
     if face_predict < 0.5:
         print(face_labels[0], face_predict[0][0])
-        return question('あなたは{}ちゃんですね。'.format(face_labels[0]))
+        return statement('あなたは{}ちゃんですね。'.format(face_labels[0]))
     elif face_predict >= 0.5:
         print(face_labels[1], face_predict[0][0])
-        return question('あなたは{}ちゃんですね。'.format(face_labels[1]))
+        return statement('あなたは{}ちゃんですね。'.format(face_labels[1]))
     else:
         print('だれ？')
         return question('だれだかよくわかりません')

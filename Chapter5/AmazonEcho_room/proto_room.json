@@ -1,0 +1,59 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "offIntent",
+        "samples": [
+          "消して",
+          "けして",
+          "オフにして"
+        ],
+        "slots": []
+      },
+      {
+        "name": "onIntent",
+        "samples": [
+          "つけて",
+          "いれて",
+          "点けて",
+          "入れて",
+          "オンにして"
+        ],
+        "slots": []
+      },
+      {
+        "name": "readingEnd",
+        "samples": [
+          "読書終わるよ",
+          "読書終わり",
+          "読書おわるよ",
+          "読書おわり"
+        ],
+        "slots": []
+      },
+      {
+        "name": "readingStart",
+        "samples": [
+          "読書するよ",
+          "読書はじめるよ",
+          "読書始めるよ",
+          "本読むよ"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "プロトの部屋"
+  }
+}
