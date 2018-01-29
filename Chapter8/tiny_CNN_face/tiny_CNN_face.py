@@ -49,7 +49,7 @@ validation_generator = test_datagen.flow_from_directory(
 history = model.fit_generator(
     train_generator,
     steps_per_epoch=4,
-    epochs=30,
+    epochs=60,
     validation_data=validation_generator,
     validation_steps=1)
 
@@ -62,15 +62,16 @@ plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['acc', 'val_acc'], loc='lower right')
-plt.show()
+plt.savefig("./trained_models/tiny_CNN_face_acc.png")
 
+plt.figure()
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
 plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['loss', 'val_loss'], loc='upper right')
-plt.show()
+plt.savefig("./trained_models/tiny_CNN_face_loss.png")
 
 loss, acc = model.evaluate_generator(validation_generator, steps=4)
 print('Test loss:', loss)
