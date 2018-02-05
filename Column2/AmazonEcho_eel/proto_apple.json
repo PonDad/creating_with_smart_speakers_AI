@@ -1,0 +1,89 @@
+{
+  "languageModel": {
+    "types": [
+      {
+        "name": "camera",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "カメラ",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "写真",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "チーズ",
+              "synonyms": []
+            }
+          }
+        ]
+      },
+      {
+        "name": "what",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "なに",
+              "synonyms": [
+                "何",
+                "なに",
+                "なん"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "CameraIntent",
+        "samples": [
+          "{camera}",
+          "はい {camera}"
+        ],
+        "slots": [
+          {
+            "name": "camera",
+            "type": "camera"
+          }
+        ]
+      },
+      {
+        "name": "WhatIntent",
+        "samples": [
+          "これは {what}",
+          "これ {what} だ"
+        ],
+        "slots": [
+          {
+            "name": "what",
+            "type": "what"
+          }
+        ]
+      }
+    ],
+    "invocationName": "プロトのりんご"
+  }
+}
