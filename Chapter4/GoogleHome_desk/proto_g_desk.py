@@ -1,13 +1,13 @@
 import json
 import requests
 from flask import Flask, render_template, request
-from flask_ask import Ask, statement, question
+from flask_assistant import Assistant, ask, tell
 from proto_blight import blight_result
 from proto_time import start, stop
 from proto_hue import hue_on, hue_off
 
 app = Flask(__name__)
-ask = Ask(app, '/')
+assist = Assistant(app, '/')
 
 @app.route("/blight", methods=['POST'])
 def blight():
@@ -19,24 +19,24 @@ def blight():
     json.dump(data, file)
     return result
 
-@ask.launch
-def launched():
+@assist.action('Default Welcome Intent')
+def greet_and_start():
     result = blight_result()
     text = "はいプロトです。宿題をはじめる時は、宿題をはじめるよって言ってね。"
-    return question(text)
+    return ask(text)
 
-@ask.intent('stydyStart')
+@assist.action('stydyStart')
 def studyStart():
     start()
     result = blight_result()
     print("blight:" + str(result) + "lux")
     if result < 500:
         text = "手もとが暗いですね。明かりをつけますか？"
+        return ask("宿題をはじめます。" + text)
     else:
-        text = ""
-    return question("宿題をはじめます。" + text)
+        return tell("宿題をはじめます。")
 
-@ask.intent('studyEnd')
+@assist.action('studyEnd')
 def studyEnd():
     result_time = stop()
 
@@ -45,24 +45,20 @@ def studyEnd():
 
     if 500 <= result:
         text = "明かりを消しますか？"
-        return question('机に向かった時間は' + str(result_time) + 'でした。' + text)
+        return ask('机に向かった時間は' + str(result_time) + 'でした。' + text)
     else:
-        return statement('机に向かった時間は' + str(result_time) + 'でした。お疲れさまでした。')
+        return tell('机に向かった時間は' + str(result_time) + 'でした。お疲れさまでした。')
 
-@ask.intent('onIntent')
+@assist.action('onIntent')
 def on():
     hue_on()
-    return statement('最適な明かりで設定しました。宿題頑張ってね。')
+    return tell('最適な明かりで設定しました。宿題頑張ってね。')
 
-@ask.intent('offIntent')
+@assist.action('offIntent')
 def off():
     hue_off()
     result = stop()
-    return statement('明かりを消しました。お疲れさまでした。')
-
-@ask.session_ended
-def session_ended():
-    return "{}", 200
+    return tell('明かりを消しました。お疲れさまでした。')
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000)

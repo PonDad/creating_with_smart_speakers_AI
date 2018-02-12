@@ -13,4 +13,5 @@ def hue_off():
     requests.put(hue_api + '/1/state', json = study_off)
 
 if __name__ == '__main__':
-    main()
+    start()
+    stop()
