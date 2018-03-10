@@ -1,0 +1,42 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "fireIntent",
+        "samples": [
+          "ファイヤー",
+          "発射",
+          "撃って"
+        ],
+        "slots": []
+      },
+      {
+        "name": "leftIntent",
+        "samples": [
+          "左"
+        ],
+        "slots": []
+      },
+      {
+        "name": "rightIntent",
+        "samples": [
+          "右"
+        ],
+        "slots": []
+      }
+    ],
+    "invocationName": "クラタス"
+  }
+}

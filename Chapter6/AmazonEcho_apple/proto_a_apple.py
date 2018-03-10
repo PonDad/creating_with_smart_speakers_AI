@@ -40,14 +40,14 @@ def what():
     apple_predict = model.predict(x)
     if apple_predict < 0.5:
         print(apple_labels[0], apple_predict[0][0])
-        return question('これは{}ですね。わたし青りんご嫌い。'.format(apple_labels[0]))
+        return statement('これは{}ですね。わたし青りんご嫌い。'.format(apple_labels[0]))
 
     elif apple_predict >= 0.5:
         print(apple_labels[1], apple_predict[0][0])
-        return question('これは{}ですね。わーい、赤りんご大好き。'.format(apple_labels[1]))
+        return statement('これは{}ですね。わーい、赤りんご大好き。'.format(apple_labels[1]))
     else:
         print('なにりんごかよくわかりません')
-        return question('なにりんごかよくわかりません')
+        return statement('なにりんごかよくわかりません')
 
 @ask.session_ended
 def session_ended():

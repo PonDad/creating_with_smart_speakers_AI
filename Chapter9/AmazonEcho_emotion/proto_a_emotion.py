@@ -9,8 +9,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.preprocessing import image
 import cv2
 import random
-# hue の操作不要の場合削除してください
-import requests_emotion as hue
+import proto_hue_emotion as hue
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -32,7 +31,6 @@ emotion_phrase =({
 })
 
 picamera = PiCamera()
-# compile=False　で指定してください
 model = load_model(emotion_model_path, compile=False)
 
 @ask.launch
@@ -75,15 +73,12 @@ def emotion():
     emotion_text = emotion_labels[emotion_label_arg]
     emotion_ratio = np.max(model.predict(x))
     emotion_phrase_rand = random.choice(emotion_phrase[emotion_label_arg])
-    # hue の操作不要の場合削除してください
     hue.change_light(emotion_label_arg)
     print(emotion_text,emotion_ratio)
     return question('{}ですね。いってらっしゃい。'.format(emotion_phrase_rand))
 
 @ask.session_ended
 def session_ended():
-    # hue の操作不要の場合削除してください
-    hue.neutral_light()
     return "{}", 200
 
 if __name__ == '__main__':

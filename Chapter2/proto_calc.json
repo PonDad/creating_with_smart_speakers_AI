@@ -1,80 +1,83 @@
 {
-  "languageModel": {
-    "types": [
-      {
-        "name": "list_of_add",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "たす",
-              "synonyms": [
-                "たす",
-                "足す",
-                "プラス",
-                "＋"
-              ]
+    "languageModel": {
+        "invocationName": "プロトの足し算",
+        "intents": [
+            {
+                "name": "AMAZON.CancelIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.HelpIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.StopIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "calcIntent",
+                "slots": [
+                    {
+                        "name": "firstNum",
+                        "type": "AMAZON.NUMBER"
+                    },
+                    {
+                        "name": "secondNum",
+                        "type": "AMAZON.NUMBER"
+                    },
+                    {
+                        "name": "calcAdd",
+                        "type": "list_of_add"
+                    },
+                    {
+                        "name": "calcSub",
+                        "type": "list_of_sub"
+                    }
+                ],
+                "samples": [
+                    "{firstNum} {calcAdd} {secondNum} は",
+                    "{firstNum} {calcSub} {secondNum} は"
+                ]
             }
-          }
-        ]
-      },
-      {
-        "name": "list_of_sub",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "ひく",
-              "synonyms": [
-                "ひく",
-                "引く",
-                "マイナス",
-                "−"
-              ]
-            }
-          }
-        ]
-      }
-    ],
-    "intents": [
-      {
-        "name": "AMAZON.CancelIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.HelpIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.StopIntent",
-        "samples": []
-      },
-      {
-        "name": "calcIntent",
-        "samples": [
-          "{firstNum} {calcAdd} {secondNum} は",
-          "{firstNum} {calcSub} {secondNum} は"
         ],
-        "slots": [
-          {
-            "name": "firstNum",
-            "type": "AMAZON.NUMBER"
-          },
-          {
-            "name": "secondNum",
-            "type": "AMAZON.NUMBER"
-          },
-          {
-            "name": "calcAdd",
-            "type": "list_of_add"
-          },
-          {
-            "name": "calcSub",
-            "type": "list_of_sub"
-          }
+        "types": [
+            {
+                "name": "list_of_add",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "たす",
+                            "synonyms": [
+                                "たす",
+                                "足す",
+                                "プラス",
+                                "＋"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "list_of_sub",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "ひく",
+                            "synonyms": [
+                                "ひく",
+                                "引く",
+                                "マイナス",
+                                "−"
+                            ]
+                        }
+                    }
+                ]
+            }
         ]
-      }
-    ],
-    "invocationName": "プロト"
-  }
+    }
 }

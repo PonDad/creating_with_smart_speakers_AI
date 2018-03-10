@@ -1,89 +1,92 @@
 {
-  "languageModel": {
-    "types": [
-      {
-        "name": "camera",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "カメラ",
-              "synonyms": []
+    "languageModel": {
+        "invocationName": "プロトのりんご",
+        "intents": [
+            {
+                "name": "AMAZON.CancelIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.HelpIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.StopIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "CameraIntent",
+                "slots": [
+                    {
+                        "name": "camera",
+                        "type": "camera"
+                    }
+                ],
+                "samples": [
+                    "{camera}",
+                    "はい {camera}"
+                ]
+            },
+            {
+                "name": "WhatIntent",
+                "slots": [
+                    {
+                        "name": "what",
+                        "type": "what"
+                    }
+                ],
+                "samples": [
+                    "これは {what}",
+                    "これ {what} だ"
+                ]
             }
-          },
-          {
-            "id": null,
-            "name": {
-              "value": "写真",
-              "synonyms": []
-            }
-          },
-          {
-            "id": null,
-            "name": {
-              "value": "チーズ",
-              "synonyms": []
-            }
-          }
-        ]
-      },
-      {
-        "name": "what",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "なに",
-              "synonyms": [
-                "何",
-                "なに",
-                "なん"
-              ]
-            }
-          }
-        ]
-      }
-    ],
-    "intents": [
-      {
-        "name": "AMAZON.CancelIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.HelpIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.StopIntent",
-        "samples": []
-      },
-      {
-        "name": "CameraIntent",
-        "samples": [
-          "{camera}",
-          "はい {camera}"
         ],
-        "slots": [
-          {
-            "name": "camera",
-            "type": "camera"
-          }
+        "types": [
+            {
+                "name": "camera",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "カメラ",
+                            "synonyms": []
+                        }
+                    },
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "写真",
+                            "synonyms": []
+                        }
+                    },
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "チーズ",
+                            "synonyms": []
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "what",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "なに",
+                            "synonyms": [
+                                "何",
+                                "なに",
+                                "なん"
+                            ]
+                        }
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "name": "WhatIntent",
-        "samples": [
-          "これは {what}",
-          "これ {what} だ"
-        ],
-        "slots": [
-          {
-            "name": "what",
-            "type": "what"
-          }
-        ]
-      }
-    ],
-    "invocationName": "プロトのりんご"
-  }
+    }
 }

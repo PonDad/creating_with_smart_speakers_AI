@@ -1,92 +1,95 @@
 {
-  "languageModel": {
-    "types": [
-      {
-        "name": "camera",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "カメラ",
-              "synonyms": []
+    "languageModel": {
+        "invocationName": "プロトのカメラ",
+        "intents": [
+            {
+                "name": "AMAZON.CancelIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.HelpIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.StopIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "CameraIntent",
+                "slots": [
+                    {
+                        "name": "camera",
+                        "type": "camera"
+                    }
+                ],
+                "samples": [
+                    "{camera}",
+                    "はい {camera}"
+                ]
+            },
+            {
+                "name": "WhoIntent",
+                "slots": [
+                    {
+                        "name": "who",
+                        "type": "who"
+                    }
+                ],
+                "samples": [
+                    "これは {who}",
+                    " {who} だ",
+                    "わたしは {who} だ"
+                ]
             }
-          },
-          {
-            "id": null,
-            "name": {
-              "value": "写真",
-              "synonyms": []
-            }
-          },
-          {
-            "id": null,
-            "name": {
-              "value": "チーズ",
-              "synonyms": []
-            }
-          }
-        ]
-      },
-      {
-        "name": "who",
-        "values": [
-          {
-            "id": null,
-            "name": {
-              "value": "だれ",
-              "synonyms": [
-                "だれ",
-                "誰",
-                "だあれ",
-                "だーれ",
-                "だ〜れ"
-              ]
-            }
-          }
-        ]
-      }
-    ],
-    "intents": [
-      {
-        "name": "AMAZON.CancelIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.HelpIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.StopIntent",
-        "samples": []
-      },
-      {
-        "name": "CameraIntent",
-        "samples": [
-          "{camera}",
-          "はい {camera}"
         ],
-        "slots": [
-          {
-            "name": "camera",
-            "type": "camera"
-          }
+        "types": [
+            {
+                "name": "camera",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "カメラ",
+                            "synonyms": []
+                        }
+                    },
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "写真",
+                            "synonyms": []
+                        }
+                    },
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "チーズ",
+                            "synonyms": []
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "who",
+                "values": [
+                    {
+                        "id": "",
+                        "name": {
+                            "value": "だれ",
+                            "synonyms": [
+                                "だれ",
+                                "誰",
+                                "だあれ",
+                                "だーれ",
+                                "だ〜れ"
+                            ]
+                        }
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "name": "WhoIntent",
-        "samples": [
-          "これは {who}",
-          " {who} だ",
-          "わたしは {who} だ"
-        ],
-        "slots": [
-          {
-            "name": "who",
-            "type": "who"
-          }
-        ]
-      }
-    ],
-    "invocationName": "プロトのカメラ"
-  }
+    }
 }

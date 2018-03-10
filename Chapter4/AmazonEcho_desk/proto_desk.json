@@ -1,60 +1,64 @@
 {
-  "languageModel": {
-    "intents": [
-      {
-        "name": "AMAZON.CancelIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.HelpIntent",
-        "samples": []
-      },
-      {
-        "name": "AMAZON.StopIntent",
-        "samples": []
-      },
-      {
-        "name": "offIntent",
-        "samples": [
-          "消して",
-          "けして",
-          "オフにして"
+    "languageModel": {
+        "invocationName": "プロトの明かり",
+        "intents": [
+            {
+                "name": "AMAZON.CancelIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.HelpIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "AMAZON.StopIntent",
+                "slots": [],
+                "samples": []
+            },
+            {
+                "name": "offIntent",
+                "slots": [],
+                "samples": [
+                    "消して",
+                    "けして",
+                    "オフにして"
+                ]
+            },
+            {
+                "name": "onIntent",
+                "slots": [],
+                "samples": [
+                    "つけて",
+                    "点けて",
+                    "オンにして"
+                ]
+            },
+            {
+                "name": "studyEnd",
+                "slots": [],
+                "samples": [
+                    "宿題をおわって",
+                    "宿題を終わって",
+                    "宿題おわって",
+                    "宿題終わって",
+                    "宿題終わり",
+                    "宿題おわり"
+                ]
+            },
+            {
+                "name": "stydyStart",
+                "slots": [],
+                "samples": [
+                    "宿題をはじめて",
+                    "宿題を始めて",
+                    "宿題やるよ",
+                    "宿題をやるよ",
+                    "宿題はじめて"
+                ]
+            }
         ],
-        "slots": []
-      },
-      {
-        "name": "onIntent",
-        "samples": [
-          "つけて",
-          "点けて",
-          "オンにして"
-        ],
-        "slots": []
-      },
-      {
-        "name": "studyEnd",
-        "samples": [
-          "宿題をおわって",
-          "宿題を終わって",
-          "宿題おわって",
-          "宿題終わって",
-          "宿題終わり",
-          "宿題おわり"
-        ],
-        "slots": []
-      },
-      {
-        "name": "stydyStart",
-        "samples": [
-          "宿題をはじめて",
-          "宿題を始めて",
-          "宿題やるよ",
-          "宿題をやるよ",
-          "宿題はじめて"
-        ],
-        "slots": []
-      }
-    ],
-    "invocationName": "プロトの明かり"
-  }
+        "types": []
+    }
 }
