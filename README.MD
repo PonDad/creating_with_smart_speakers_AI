@@ -2,8 +2,6 @@
 
 2018年3月発行、マイナビ出版刊『スマートスピーカー × AIプログラミング』(ISBN978-4-8399-6580-8)のプログラムコードの提供レポジトリです。
 
-<script src="https://embed.small.chat/T9N4304JHG9MT5KKS7.js" async></script>
-
 ## 目次
 
 #### Chapter 1 スマートスピーカーでAIをつくろう
